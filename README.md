@@ -106,25 +106,6 @@ This README provides text content or summaries of the HTML files in this directo
 **Title:** Document  
 **Summary:** (Audio-related content)
 
-## And other files in subdirectories...
-- namra/list.html: Document
-- namra/list1.html: List in a HTML
-- namra/list2.html: Document
-- namra/nestlist.html: Document
-- namra/table/table.html: Document
-- namra/table/table1.html: Document
-- New folder/first.html: First web page
-- New folder/form.html: form
-- New folder/list.html: Document
-- New folder/list1.html: Document
-- New folder/newtable.html: Document
-- New folder/table.html: Document
-- New folder/table2.html: Document
-- New folder (2)/exam.html: Document
-- New folder (2)/first.html: First webpage
-- New folder (2)/list.html: Document
-- New folder (2)/one.html: Document
-- New folder (2)/table.html: Document
-- New folder (2)/tags.html: Document
+
 
 Note: Many files have default "Document" titles. For more detailed summaries, additional files can be read.
