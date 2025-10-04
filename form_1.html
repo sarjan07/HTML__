@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Form Data</title>
+    
+</head>
+<body>
+    <form action="">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="pass">
+        <br><br>
+        <!-- Changed to button type="button" -->
+        <button type="button" onclick="printData()">Submit</button>
+    </form>
+
+    <div id="printArea" class="print-area" style="display: none;">
+        <h3>Entered Data</h3>
+        <p><b>Username:</b> <span id="pUser"></span></p>
+        <p><b>Password:</b> <span id="pPass"></span></p>
+    </div>
+
+    <script>
+        function printData() {
+            // get values
+            var userName = document.getElementById("username").value;
+            var password = document.getElementById("pass").value;
+
+            // print values
+            document.getElementById("pUser").textContent = userName;
+            document.getElementById("pPass").textContent = password;
+
+            // show details below
+            document.getElementById("printArea").style.display = "block";
+        }
+    </script>
+</body>
+</html>

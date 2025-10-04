@@ -1,0 +1,17 @@
+web page: Collection of data in a single page
+website: Collection of web pages means website
+
+First website: https://info.cern.ch/
+
+To save the html file we use .html/.htm extension
+
+Structure of html
+
+<html>
+<head>
+    <title>Web page</title>
+</head>
+<body>
+    
+</body>
+</html>

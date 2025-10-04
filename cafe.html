@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Café Order Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .print-area { margin-top: 20px; border: 2px dashed #333; padding: 15px; }
+    h2 { color: brown; }
+  </style>
+</head>
+<body>
+
+  <h2>☕ Café Order Form</h2>
+
+  <form id="orderForm">
+    <label>Customer Name: </label>
+    <input type="text" id="custName"><br><br>
+
+    <label>Table No: </label>
+    <input type="number" id="tableNo"><br><br>
+
+    <label>Order Items:</label><br>
+    <input type="checkbox" id="coffee" value="Coffee"> Coffee<br>
+    <input type="checkbox" id="tea" value="Tea"> Tea<br>
+    <input type="checkbox" id="sandwich" value="Sandwich"> Sandwich <input type="number" id="tableNo"><br>
+    <input type="checkbox" id="cake" value="Cake"> Cake<br><br>
+
+    <label>Special Notes:</label><br>
+    <textarea id="notes"></textarea><br><br>
+
+    <button type="button" onclick="showOrder()">Show Order</button>
+    <button type="button" onclick="window.print()">Print Order</button>
+  </form>
+
+  <!-- Print Area -->
+  <div id="printArea" class="print-area" style="display:none;">
+    <h2>🍽️ Café Order Receipt</h2>
+    <p><b>Customer:</b> <span id="pCust"></span></p>
+    <p><b>Table No:</b> <span id="pTable"></span></p>
+    <p><b>Items Ordered:</b> <span id="pItems"></span></p>
+    <p><b>Special Notes:</b> <span id="pNotes"></span></p>
+    <hr>
+    <p>✅ Thank you! Your order is being prepared...</p>
+  </div>
+
+  <script>
+    function showOrder() {
+      var custName = document.getElementById("custName").value;
+      var tableNo = document.getElementById("tableNo").value;
+      var notes = document.getElementById("notes").value;
+
+      // Collect checked items
+      var items = [];
+      ["coffee","tea","sandwich","cake"].forEach(id => {
+        var el = document.getElementById(id);
+        if(el.checked) items.push(el.value);
+      });
+
+      // Put values in print area
+      document.getElementById("pCust").textContent = custName;
+      document.getElementById("pTable").textContent = tableNo;
+      document.getElementById("pItems").textContent = items.join(", ");
+      document.getElementById("pNotes").textContent = notes;
+
+      document.getElementById("printArea").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Batch of Kids Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 90vh;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .flyer {
+            width: 650px;
+            height: auto;
+            min-height: 550px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8faff 50%, #e8f4fd 100%);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #ffffff;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            position: relative;
+            padding: 25px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background-color: red; */
+            /* clip-path: polygon(0 0, 100% 0, 90% 85%, 0 100%); */
+            height: 140px;
+        }
+        
+        .connect-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            margin-top: -12px;
+            margin-left: -8px;
+        }
+        
+        .connect-text {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: rgba(255,255,255,0.4);
+            transform: translateY(-2px);
+        }
+        
+        .logo-section {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            /* gap: 5px; */
+            /* background: rgba(255,255,255,0.15); */
+            /* backdrop-filter: blur(15px); */
+            padding: 15px 25px;
+            border-radius: 20px;
+            /* border: 1px solid rgba(255,255,255,0.2); */
+        }
+        
+        .royal-logo {
+            width: 105px;
+            height: 50px;
+            /* background: ; */
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+            text-align: center;
+            line-height: 1.1;
+        }
+        
+        .oracle-logo {
+            width: 120px;
+            height: 50px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(243,156,18,0.4);
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            width: 120px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .title-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0 63px;
+        }
+        
+        .main-title {
+            flex: 1;
+        }
+        
+        .title-line1 {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .title-line2 {
+            font-size: 40px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .title-line3 {
+            font-size: 40px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .instructor {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .dhiraj-photo {
+            width: 130px;
+            height: 130px;
+            /* border-radius: 50%; */
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: 5px solid #fff;
+            box-shadow: 0 15px 35px rgba(102,126,234,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .dhiraj-photo::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* border-radius: 50%; */
+            /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="10,5"/></svg>'); */
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 30px;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        
+        .feature {
+            text-align: center;
+            background: rgba(255,255,255,0.9);
+            padding: 30px 13px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 2px solid rgba(102,126,234,0.1);
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+        
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 22px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-icon.c-lang {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        .feature-icon.cpp {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .feature-icon.java {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.3;
+        }
+        
+        .date-section {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            padding: 15px;
+            margin: 30px 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(78,205,196,0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .date-label {
+            font-size: 24px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .date-value {
+            font-size: 32px;
+            color: #2c3e50;
+            font-weight: 900;
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.95);
+            padding: 12px 25px;
+            border-radius: 18px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .time-label {
+            font-size: 22px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .time-value {
+            font-size: 26px;
+            color: #2c3e50;
+            font-weight: 800;
+            background: rgba(255,255,255,0.95);
+            padding: 10px 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .instructor-section {
+            display: flex;
+            align-items: center;
+            padding: 30px 40px;
+            gap: 30px;
+            background: rgba(255,255,255,0.7);
+            margin: 30px 40px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(102,126,234,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .instructor-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: 4px solid #fff;
+            box-shadow: 0 10px 25px rgba(102,126,234,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .instructor-details {
+            flex: 1;
+        }
+        
+        .instructor-name {
+            font-size: 24px;
+            font-weight: 900;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .instructor-credentials {
+            font-size: 15px;
+            color: #5a6c7d;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        
+        .registration {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            padding: 20px;
+            margin: 30px 40px 40px;
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 40px rgba(255,107,107,0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .registration-text {
+            font-size: 18px;
+            margin-bottom: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .phone-number {
+            font-size: 30px;
+            font-weight: 700;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 18px;
+            display: inline-block;
+            letter-spacing: 3px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .inquiry-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 25px 40px;
+            margin: 20px 40px 40px;
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .inquiry-text {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+        
+        .company-name-section {
+            font-size: 32px;
+            font-weight: 900;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 15px;
+            display: inline-block;
+            letter-spacing: 2px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 15px;
+        }
+        
+        .batch-info {
+            font-size: 18px;
+            font-weight: 600;
+            background: rgba(255,255,255,0.15);
+            padding: 12px 20px;
+            border-radius: 12px;
+            display: inline-block;
+            letter-spacing: 1px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .decorative-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .circle1, .circle2, .circle3 {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.03);
+        }
+        
+        .circle1 {
+            width: 250px;
+            height: 250px;
+            top: -125px;
+            right: -125px;
+        }
+        
+        .circle2 {
+            width: 180px;
+            height: 180px;
+            bottom: -90px;
+            left: -90px;
+        }
+        
+        .circle3 {
+            width: 120px;
+            height: 120px;
+            top: 40%;
+            right: -60px;
+        }
+        .footer {
+        margin-top: auto;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        text-align: center;
+        padding: 15px;
+        border-radius: 0 0 25px 25px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        }
+        .alumni {
+            font-size: 16px;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="decorative-elements">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+        
+        <div class="header">
+            <div class="connect-section">
+                <div class="connect-text">connect us on:</div>
+                <div class="social-icons">
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/share/17MnzJ9uyj/" target="_blank">f</a>
+                    </div>
+                    <div class="social-icon">
+                        t<a href="" target="_blank"></a>
+                    </div>
+                    <!-- <div class="social-icon">@</div> -->
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/dhiraj-poojara-3241347b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">In</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="logo-section">
+                <div class="">
+                    <!-- <img src="./royal logo.png" height="30px"> -->
+                     <!-- <img src="https://royaltechnosoft.com/wp-content/uploads/2018/11/logo_mobile.png" height="65px"> -->
+                     <img src="./royal logo.png" height="70px">
+
+                    <!-- ROYAL<br>Tech -->
+                </div>
+                <!-- <div class="oracle-logo">O</div> -->
+                <div class="logo-text">
+                    <!-- Oracle<br>University -->
+                     <img src="./OIP-removebg-preview.png" height="65px">
+                </div>
+            </div>
+        </div>
+        
+        <div class="title-section">
+            <div class="main-title">
+                <div class="title-line1">SPECIAL</div>
+                <div class="title-line2">BATCH OF</div>
+                <div class="title-line3">KIDS COURSE</div>
+                <div class="instructor">by Dhiraj Poojara</div>
+                <div class="tagline">Guru of world's youngest programmer</div>
+                <div class="alumni">Alumni of DAIICT University</div>
+            </div>
+            <div class="dhiraj-photo">
+                <img src="https://tictechtoe-24.github.io/tictechtoe24/images/speaker.png" height="200px">
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon c-lang"><img src="https://th.bing.com/th?q=C+Programming+Logo.png&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" height="90px"></div>
+                <div class="feature-title">C<br>Programming</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon cpp">
+                    <img src="https://th.bing.com/th/id/OIP.ggb-3B-8LRfbgS0lPLYNxwHaIU?w=187&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" height="90px">
+                </div>
+                <div class="feature-title">C++<br>Programming</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon java">
+                    <img src="https://th.bing.com/th?q=Java+Programming+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" height="90px">
+                </div>
+                <div class="feature-title">Java<br>Programming</div>
+            </div>
+        </div>
+        
+        <div class="date-section">
+            <div class="date-label">Batch Start Date <br>21st September 2025</div>
+            <!-- <div class="date-value">21st Sept 2025</div> -->
+            <!-- <div class="time-label">Time</div>
+            <div class="time-value">9:00AM to 5:00PM</div> -->
+        </div>
+        
+        <!-- <div class="registration">
+            <div class="registration-text">Any further quiry call or message on this number</div>
+            <div class="phone-number">9825782290</div>
+        </div> -->
+        <div class="footer">
+            <p>For any further queries, call or message us at 9825782290</p>
+        </div>
+    </div>
+</body>
+</html>

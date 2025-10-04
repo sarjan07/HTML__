@@ -1,0 +1,17 @@
+wesite: collecction of web pages
+
+web page : structured data 
+
+extension: .html/.htm
+www.info.cern.ch <-- first website of html
+
+Structure of html
+
+<html>
+    <head>  <- head tag
+        <title>First Webpage</title>
+    </head>
+    <body>
+        Hello World
+    </body>
+</html>

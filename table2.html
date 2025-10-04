@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Jo bi cell ko ek column me merge karna hai to uske hum rowspan bolte hai
+      Aur jo bi cell ko ek row me merge karna hai usko hum colsapn bolte hai
+    -->
+    <table border="1px">
+        <tr>
+            <th colspan="6">Athletics Day Time Table</th>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <th>10am-11am</th>
+            <th>11am-12pm</th>
+            <th>12pm-1pm</th>
+            <th>1pm-2pm</th>
+            <th>2pm-3pm</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Track</th>
+            <td>400m</td>
+            <td>200m</td>
+            <th rowspan="3">Lunch</th>
+            <td>800m</td>
+            <td>100m</td>
+        </tr>
+        <tr>
+            <td>Hurdles</td>
+            <td>1500m</td>
+            <td>Free</td>
+            <td>80m</td>
+        </tr>
+        <tr>
+            <th> Field</th>
+            <td>Discus</td>
+            <td>Javelin</td>
+            <td>Shout put</td>
+            <td>Hummer throw</td>
+        </tr>
+    </table>
+</body>
+</html>

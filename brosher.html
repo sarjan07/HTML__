@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Batch of Kids Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .flyer {
+            width: 600px;
+            height: 800px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 50%, #ffd700 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            position: relative;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff4757, #ff6b7d);
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 85%);
+            height: 120px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .social-icon {
+            width: 25px;
+            height: 25px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .connect-text {
+            color: #333;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .logo-section {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 40px;
+            background: #2c3e50;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .main-title {
+            margin-top: 40px;
+            padding: 0 30px;
+        }
+        
+        .title-line1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: -5px;
+        }
+        
+        .title-line2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff4757;
+            margin-bottom: -5px;
+        }
+        
+        .title-line3 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff4757;
+            margin-bottom: 10px;
+        }
+        
+        .instructor {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            text-align: center;
+            width: 120px;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 3px solid #ff4757;
+        }
+        
+        .feature-icon.app {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+        }
+        
+        .feature-icon.game {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+        }
+        
+        .feature-icon.robotics {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+        }
+        
+        .feature-icon.hololens {
+            background: linear-gradient(45deg, #9b59b6, #8e44ad);
+        }
+        
+        .feature-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+        }
+        
+        .date-section {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .date-label {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .date-value {
+            font-size: 28px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .time-label {
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .time-value {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .instructor-section {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            gap: 20px;
+        }
+        
+        .instructor-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #34495e, #2c3e50);
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .instructor-details {
+            flex: 1;
+        }
+        
+        .instructor-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .instructor-credentials {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .registration {
+            background: linear-gradient(45deg, #ff4757, #ff6b7d);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+        
+        .registration-text {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .phone-number {
+            font-size: 32px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="header">
+            <div class="connect-text">connect us on :</div>
+            <div class="social-icons">
+                <div class="social-icon">f</div>
+                <div class="social-icon">t</div>
+                <div class="social-icon">@</div>
+                <div class="social-icon">in</div>
+            </div>
+            
+            <div class="logo-section">
+                <div class="logo"><img src="https://tse4.mm.bing.net/th/id/OIP.lcXw00lU4X9QDkFIFf9POwHaCS?rs=1&pid=ImgDetMain&o=7&rm=3" height="40px">
+                    ROYAL<br>Technosoft
+                </div>
+                <div style="color: #ff4757; font-weight: bold; font-size: 14px;">Oracle University</div>
+            </div>
+        </div>
+        
+        <div class="main-title">
+            <div class="title-line1">SPECIAL</div>
+            <div class="title-line2">BATCH OF</div>
+            <div class="title-line3">KIDS COURSE</div>
+            <div class="instructor">by Dhiraj Poojara</div>
+            <div class="tagline">Guru of world's youngest programmer</div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon app"><img src="https://www.clipartmax.com/png/small/351-3515666_c-language-global-or-external-variables-with-examples-c-programming-logo.png" height="50px"></div>
+                <div class="feature-title">C<br>Programming</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon game"><img src="https://logodix.com/logo/1137946.png" height="50px"></div>
+                <div class="feature-title">C++<br>Programming</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon robotics">🤖</div>
+                <div class="feature-title">Java Programming</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon hololens">🥽</div>
+                <div class="feature-title">HOLOLENS</div>
+            </div>
+        </div>
+        
+        <div class="date-section">
+            <div class="date-label">Date</div>
+            <div class="date-value">14th (Sun) Sept 2025</div>
+            <div class="time-label">Time</div>
+            <div class="time-value">9:00AM to 5:00PM</div>
+        </div>
+        
+        <div class="instructor-section">
+            <div class="instructor-photo"></div>
+            <div class="instructor-details">
+                <div class="instructor-name">DHIRAJ POOJARA</div>
+                <div class="instructor-credentials">
+                    Alumni, Dhirubhai Ambani Institute of ICT<br>
+                    Trainer of World's Youngest<br>
+                    Oracle Java Certified Programmer
+                </div>
+            </div>
+        </div>
+        
+        <div class="registration">
+            <div class="registration-text">FOR REGISTRATION WHATSAPP YOUR NAME NUMBER ON</div>
+            <div class="phone-number">9879472527</div>
+        </div>
+    </div>
+</body>
+</html>
