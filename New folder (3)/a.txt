@@ -1,0 +1,28 @@
+HTML:
+Hyper text markup language
+
+Programming language: C,C++,Java,Python
+
+Web development: HTML, CSS, JS, React,...etc
+
+CSS: Cascading Style Sheet
+JS: JavaScript
+
+Rules for HTML:
+1. <tag_name> <-- opening tag
+   </tag_name> <-- closing tag
+
+2. Every opening tag has a closing tag.
+
+3. 
+Structure of HTML:
+----------------------
+<html>
+    <head>
+        <title>First</title>
+    </head>
+    <body>
+        Hello Class!!
+    </body>
+</html>
+

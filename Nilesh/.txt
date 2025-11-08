@@ -1,0 +1,32 @@
+HTML invented in 1991.
+
+tim berner's lee
+
+website: html, css, js,react,node,angular....
+
+html(Hyper text markup language) : Structure website
+css(cascading style sheet) : Giving style to Structure website 
+js(JavaScript): to add different functionalities
+
+website --> collection of webpages
+webpage --> Structure data/ Structure information
+
+first website: info.cern.ch
+
+--> <> <-- angular brackets
+-> every tag needs to written in <>.
+<html>
+
+</html>
+
+-> Methods will written in between those two tags(opening and closing)
+
+Structure of HTML:
+<html>
+    <head>
+        <title>First</title>
+    </head>
+    <body>
+        This is my first website..
+    </body>
+</html>
