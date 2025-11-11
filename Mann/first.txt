@@ -1,0 +1,13 @@
+--> Every Opening tag has a closing tag.
+--> tag will be written in <>: Opening tag, </>: closing tag
+--> br, hr, img etc these tags are self closing tag.
+
+
+<html>              root element of html
+    <head>          head section: it will apply backend/links in this section
+        <title>First</title> tab's name
+    </head> 
+    <body>         it will print on browser's screen
+        Hello World 
+    </body>
+</html>
