@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+-> there are three types of lists in html
+1. Ordered list:
+    1.  a.  A.  I.   
+    2.  b.  B.  II.
+    3.  c.  C.  III.
+- the list which is numbered and also countable is called ordered list
+- first tag is <ol> and each item is in <li> tag
+    ol- oredered list  , li - list item
+
+- it has attribute like start, type and reversed
+- type attribute has  3 types
+1. NUmbered (1,2,3,4)  (by default)
+2. Alphabets : lower(a,b,c) and Upper(A,B,C)
+3. Roman: lower(i,ii,iii) and Upper (I,II,III)
+
+- Start : it is used to start the list at the particular number..
+  - it will always write in number only
+
+- Reversed : it will reverse the order list...
+
+-->
+<h2> Oredered List</h2>
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+    <li>React</li>
+    <li>Node</li>
+</ol>
+
+<ol type="a">
+    <li>Head</li>
+    <li>Body</li>
+    <li>TItle</li>
+    <li>Meta</li>
+    <li>Link</li>
+</ol>
+
+<ol type="i" start="5" reversed>
+    <li>Head</li>
+    <li>Body</li>
+    <li>TItle</li>
+    <li>Meta</li>
+    <li>Link</li>
+</ol>
+
+<!-- 2. Unordered list:
+- it will start with <ul> tag and each item is in <li> tag.
+- it will never numbered/ countable
+- it has a three types of unordered list 
+ 1. Disc (default)
+ 2. Circle:
+ 3. Square: 
+-->
+<h2>Unordered List: </h2>
+<ul>
+    <li>Coffee</li>
+    <li>Green Tea</li>
+    <li>Balck Tea</li>
+    <li>Tea</li>
+</ul>
+
+<ul type="CirClE">
+    <li>India</li>
+    <li>UK</li>
+    <li>Germany</li>
+    <li>Canada</li>
+    <li>America</li>
+    <li>France</li>
+    <li>Spain</li>
+</ul>
+<ul type="Square">
+    <li>Gujarat</li>
+    <li>Rajasthan</li>
+    <li>Maharastra</li>
+    <li>Kerala</li>
+    <li>Tamil Nadu</li>
+    <li>Punjab</li>
+    <li>Haryana</li>
+</ul>
+
+
+<!-- 3. Description list: 
+- it will be used for shortform/abbreviation/fullname description
+- it will start with dl tag (description list)
+- first item is in the dt tag  (description title)
+- After writing dt tag, its item will be written in dd tag (Description details/data)
+-->
+<dl>
+    <dt>HTML</dt>
+    <dd>Hyper Text Markup Language</dd>
+</dl>
+<!-- 
+abbr tag is used for abbreviation fullform and it will be shown whne cursor will be hover on it.
+-->
+<abbr title="Hyper Text Markup Language">
+    HTML
+</abbr>
+
+
+
+
+<h2>Task for Tommorrow</h2>
+<ul>
+    <li>Send Sketches</li>
+    <li>File Explorer
+        <ol>
+            <li>Trip to Sanfransisco</li>
+            <li> Trip to Los Angelis</li>
+        </ol>
+    </li>
+</ul>
+</body>
+</html>

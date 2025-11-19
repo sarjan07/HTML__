@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+        <tr>
+            <td colspan="2">Callspan Column</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Rowspan<br>Cell</td>
+            <td>Cell 2 </td>           
+        </tr>
+        <tr>
+            <td bgcolor="yellow">
+                <table border="1">
+                    <tr>
+                        <th>Inner column <br>heading 1</th>
+                        <th>Inner column Heading 2</th>
+                    </tr>
+                    <tr>
+                        <td bgcolor="gray">Inner Cell Data 1</td>
+                        <td>
+                            <table border="1">
+                                <tr>
+                                    <th>Inner most heading 1</th>
+                                    <th>Inner most heading 2</th>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
