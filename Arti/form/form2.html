@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+<!--
+if label's for and input's id are same than you can access by clicking on label...        
+-->
+        <label for="user">Name: </label>
+        <input type="text" id="user">
+
+        <br><br>
+        <!-- date type input -->
+        <label for="date">DOB:</label>
+        <input type="date" id="date">
+
+        <br><br>
+        <!-- dropdown input type -->
+        <label>State</label>
+        <select>
+            <option>Select</option>
+            <option>Gujarat</option>
+            <option>Maharastra</option>
+            <option>Kerala</option>
+            <option>Tamil Nadu</option>
+            <option>Goa</option>
+        </select>
+
+        <!-- option group input type -->
+         <br><br>
+        <label>State:</label>
+        <select title="state">
+            <optgroup title="state">State</optgroup>
+            <option>Gujarat</option>
+            <option>Maharastra</option>
+            <option>Kerala</option>
+            <option>Tamil Nadu</option>
+            <option>Goa</option>
+        </select>
+        <br><br>
+
+
+        <!-- upload a file -->
+        <label for="file">Upload a file</label>
+        <input type="file" id="file">
+<br><br>
+
+        <!-- upload a image -->
+        <label for="img">Upload a Picutre</label>
+        <input type="file" id="img">
+        <br><br>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
